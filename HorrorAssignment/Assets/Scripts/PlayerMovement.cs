@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    PlayerMovement instance;
+    public PlayerMovement instance;
 
     //Variables for movement
     public Rigidbody2D body;
