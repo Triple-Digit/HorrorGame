@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
-  destroyTime: 3
+  destroyTime: 1.6
 --- !u!1 &1538833477289429683
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1.6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -2122,7 +2122,7 @@ ParticleSystem:
     speedModifier:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 0.5
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
