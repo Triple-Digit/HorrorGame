@@ -12,7 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     Vector3 startPosition;
     Vector2 movement;
     Rigidbody2D body;
-    public bool spottedPlayer;
+    public bool spottedPlayer, chasedPlayer;
 
     public Transform spawnPoint;
     public GameObject[] particles;
@@ -40,28 +40,30 @@ public class EnemyBehavior : MonoBehaviour
         if (hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-            if(hitInfo.collider.tag != "Player")
+            if(chasedPlayer && hitInfo.collider.tag != "Player")
             {
-                
-                GoBack();
-
+                spottedPlayer = false;
             }
             
         }
-        if(hitInfo.collider == null)
-        {
-            Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
-        }
+        SpawnParitcles();
 
-        if(spottedPlayer)
+        if (spottedPlayer)
         {
             ChasePlayer();
         }
+        else
+        {
+            GoBack();
+        }
+
+        
 
     }
 
     public void ChasePlayer()
     {
+        
         Vector3 direction = playerPosition.position - transform.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -71,6 +73,7 @@ public class EnemyBehavior : MonoBehaviour
         movement = direction;
 
         body.MovePosition(transform.position + (direction * speed * Time.deltaTime));
+        chasedPlayer = true;
     }
 
     public void GoBack()
@@ -84,11 +87,39 @@ public class EnemyBehavior : MonoBehaviour
         movement = headBackdirection;
 
         body.MovePosition(transform.position + (headBackdirection * speed * Time.deltaTime));
+        
     }
 
     public void playerSpotted()
     {
-        Debug.Log("Enemy heard the player");
+        
         spottedPlayer = true;
     }
+
+    public void SpawnParitcles()
+    {
+        if (Time.time >= timeToSpawnFootStepSoundParticle)
+        {
+
+            if (chasedPlayer)
+            {
+                if(spottedPlayer)
+                {
+                    Instantiate(particles[0], spawnPoint.transform.position, spawnPoint.rotation);
+                }
+                else
+                {
+                    Instantiate(particles[2], spawnPoint.transform.position, spawnPoint.rotation);
+                }
+            }
+            else
+            {
+                Instantiate(particles[3], spawnPoint.transform.position, spawnPoint.rotation);
+            }
+
+            timeToSpawnFootStepSoundParticle = Time.time + 1 / steppingSpeed;
+        }
+        
+    }
+
 }

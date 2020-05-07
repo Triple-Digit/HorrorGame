@@ -22,6 +22,7 @@ public class ParticleCollision : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyBehavior>().playerSpotted();
+            other.gameObject.GetComponent<EnemyBehavior>().ChasePlayer();
         }
     }
     
