@@ -106,10 +106,12 @@ public class EnemyBehavior : MonoBehaviour
                 if(spottedPlayer)
                 {
                     Instantiate(particles[0], spawnPoint.transform.position, spawnPoint.rotation);
+                    steppingSpeed = 3f;
                 }
                 else
                 {
                     Instantiate(particles[2], spawnPoint.transform.position, spawnPoint.rotation);
+                    steppingSpeed = 1f;
                 }
             }
             else
