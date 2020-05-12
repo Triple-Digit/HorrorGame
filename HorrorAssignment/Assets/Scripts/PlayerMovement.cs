@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public float steppingSpeed;
     float timeToSpawnFootStepSoundParticle;
 
+    //Audio 
+    public AudioSource clap;
+
 
     // Start is called before the first frame update
     void Start()
@@ -86,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(particles[2], spawnPoint.transform.position, spawnPoint.rotation);
+            clap.Play();
         }
 
     }

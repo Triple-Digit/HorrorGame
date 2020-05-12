@@ -18,19 +18,21 @@ public class ObjectSound : MonoBehaviour
         
     }
 
-    //private void OnCollisionStay2D(Collision2D collision)
-    //{
-        //if(collision.gameObject.tag == "Player" && Input.GetKeyDown("e"))
-        //{
-            //sFX.Play();
-        //}
-    //}
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player" && Input.GetKeyDown("e"))
+        {
+            sFX.Play();
+            Debug.Log("Sound");
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && Input.GetKeyDown("e"))
         {
             sFX.Play();
+            Debug.Log("Sound");
         }
     }
 }
