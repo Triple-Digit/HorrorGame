@@ -44,10 +44,8 @@ public class EnemyBehavior : MonoBehaviour
             {
                 spottedPlayer = false;
             }
-            
         }
         SpawnParitcles();
-
         if (spottedPlayer)
         {
             ChasePlayer();
@@ -56,22 +54,15 @@ public class EnemyBehavior : MonoBehaviour
         {
             GoBack();
         }
-
-        
-
     }
 
     public void ChasePlayer()
     {
-        
         Vector3 direction = playerPosition.position - transform.position;
-
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         body.rotation = angle;
         direction.Normalize();
-
         movement = direction;
-
         body.MovePosition(transform.position + (direction * speed * Time.deltaTime));
         chasedPlayer = true;
     }
@@ -79,20 +70,15 @@ public class EnemyBehavior : MonoBehaviour
     public void GoBack()
     {
         Vector3 headBackdirection = startPosition - transform.position;
-
         float angle = Mathf.Atan2(headBackdirection.y, headBackdirection.x) * Mathf.Rad2Deg;
         body.rotation = angle;
         headBackdirection.Normalize();
-
         movement = headBackdirection;
-
         body.MovePosition(transform.position + (headBackdirection * speed * Time.deltaTime));
-        
     }
 
     public void playerSpotted()
     {
-        
         spottedPlayer = true;
     }
 
@@ -100,7 +86,6 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (Time.time >= timeToSpawnFootStepSoundParticle)
         {
-
             if (chasedPlayer)
             {
                 if(spottedPlayer)
@@ -114,14 +99,15 @@ public class EnemyBehavior : MonoBehaviour
                     steppingSpeed = 1f;
                 }
             }
-            else
-            {
-                Instantiate(particles[3], spawnPoint.transform.position, spawnPoint.rotation);
-            }
-
             timeToSpawnFootStepSoundParticle = Time.time + 1 / steppingSpeed;
         }
-        
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            //Send Message to restart level
+        }
+    }
 }
