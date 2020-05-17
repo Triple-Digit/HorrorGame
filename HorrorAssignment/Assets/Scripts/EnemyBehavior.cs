@@ -14,6 +14,12 @@ public class EnemyBehavior : MonoBehaviour
     Rigidbody2D body;
     public bool spottedPlayer, chasedPlayer;
 
+
+    public WaypointManager waypoints;
+    int waypointIndex;
+    bool goingbackwardsthroughWaypoints;
+
+
     public Transform spawnPoint;
     public GameObject[] particles;
     public float steppingSpeed;
@@ -52,7 +58,27 @@ public class EnemyBehavior : MonoBehaviour
         }
         else
         {
-            GoBack();
+            if(waypoints != null)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, waypoints.waypoints[waypointIndex].position, speed * Time.deltaTime);
+                if(Vector2.Distance(transform.position, waypoints.waypoints[waypointIndex].position) < 0.1f)
+                {
+                    if (waypointIndex < waypoints.waypoints.Length - 1 && !goingbackwardsthroughWaypoints)
+                    {
+                        waypointIndex++;
+                    }
+                    else
+                    {
+                        waypointIndex--;
+                        goingbackwardsthroughWaypoints = true;
+
+                        if(waypointIndex <= 0)
+                        {
+                            goingbackwardsthroughWaypoints = false;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -86,6 +112,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (Time.time >= timeToSpawnFootStepSoundParticle)
         {
+
             if (chasedPlayer)
             {
                 if(spottedPlayer)
@@ -107,7 +134,10 @@ public class EnemyBehavior : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            //Send Message to restart level
+            GameManager.instance.PlayerCaught();
         }
     }
+
+
+
 }
