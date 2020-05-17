@@ -14,6 +14,12 @@ public class EnemyBehavior : MonoBehaviour
     Rigidbody2D body;
     public bool spottedPlayer, chasedPlayer;
 
+
+    public WaypointManager waypoints;
+    int waypointIndex;
+    bool goingbackwardsthroughWaypoints;
+
+
     public Transform spawnPoint;
     public GameObject[] particles;
     public float steppingSpeed;
@@ -44,34 +50,45 @@ public class EnemyBehavior : MonoBehaviour
             {
                 spottedPlayer = false;
             }
-            
         }
         SpawnParitcles();
-
         if (spottedPlayer)
         {
             ChasePlayer();
         }
         else
         {
-            GoBack();
+            if(waypoints != null)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, waypoints.waypoints[waypointIndex].position, speed * Time.deltaTime);
+                if(Vector2.Distance(transform.position, waypoints.waypoints[waypointIndex].position) < 0.1f)
+                {
+                    if (waypointIndex < waypoints.waypoints.Length - 1 && !goingbackwardsthroughWaypoints)
+                    {
+                        waypointIndex++;
+                    }
+                    else
+                    {
+                        waypointIndex--;
+                        goingbackwardsthroughWaypoints = true;
+
+                        if(waypointIndex <= 0)
+                        {
+                            goingbackwardsthroughWaypoints = false;
+                        }
+                    }
+                }
+            }
         }
-
-        
-
     }
 
     public void ChasePlayer()
     {
-        
         Vector3 direction = playerPosition.position - transform.position;
-
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         body.rotation = angle;
         direction.Normalize();
-
         movement = direction;
-
         body.MovePosition(transform.position + (direction * speed * Time.deltaTime));
         chasedPlayer = true;
     }
@@ -79,20 +96,15 @@ public class EnemyBehavior : MonoBehaviour
     public void GoBack()
     {
         Vector3 headBackdirection = startPosition - transform.position;
-
         float angle = Mathf.Atan2(headBackdirection.y, headBackdirection.x) * Mathf.Rad2Deg;
         body.rotation = angle;
         headBackdirection.Normalize();
-
         movement = headBackdirection;
-
         body.MovePosition(transform.position + (headBackdirection * speed * Time.deltaTime));
-        
     }
 
     public void playerSpotted()
     {
-        
         spottedPlayer = true;
     }
 
@@ -114,14 +126,18 @@ public class EnemyBehavior : MonoBehaviour
                     steppingSpeed = 1f;
                 }
             }
-            else
-            {
-                Instantiate(particles[3], spawnPoint.transform.position, spawnPoint.rotation);
-            }
-
             timeToSpawnFootStepSoundParticle = Time.time + 1 / steppingSpeed;
         }
-        
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            GameManager.instance.PlayerCaught();
+        }
+    }
+
+
 
 }
