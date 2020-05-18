@@ -18,7 +18,7 @@ public class ParticleCollision : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("Enemy heard the player");
+        
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyBehavior>().playerSpotted();
