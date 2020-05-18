@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Audio 
     public AudioSource clap;
+    public AudioSource walk;
 
 
     // Start is called before the first frame update
@@ -82,6 +83,19 @@ public class PlayerMovement : MonoBehaviour
                 }
 
                 timeToSpawnFootStepSoundParticle = Time.time + 1 / steppingSpeed;
+
+                if (running)
+                {
+                    walk.pitch = Random.Range(1.0f, 1.2f);
+                    walk.volume = 0.8f;
+                    walk.Play();
+                }
+                else if (!running)
+                {
+                    walk.pitch = Random.Range(1.0f, 1.2f);
+                    walk.volume = 0.3f;
+                    walk.Play();
+                }
             }
             
         }
