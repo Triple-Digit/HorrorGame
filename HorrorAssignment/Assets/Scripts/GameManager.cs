@@ -6,16 +6,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public Scene nextScene;
+    public string nextScene;
     public float waitToLoad = 3f;
     public bool playerCaught, levelEnding;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         instance = this;
         playerCaught = false;
         levelEnding = false;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -46,6 +51,6 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Finished Level");
         yield return new WaitForSeconds(waitToLoad);
-        SceneManager.LoadScene(nextScene.name);
+        SceneManager.LoadScene(nextScene);
     }
 }

@@ -436,7 +436,17 @@ PrefabInstance:
     - target: {fileID: 3322983170037236168, guid: e4e680f764f54694db4e8e175c7bda56,
         type: 3}
       propertyPath: waitToLoad
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322983170037236168, guid: e4e680f764f54694db4e8e175c7bda56,
+        type: 3}
+      propertyPath: nextScene.m_Handle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322983170037236168, guid: e4e680f764f54694db4e8e175c7bda56,
+        type: 3}
+      propertyPath: nextScene
+      value: LevelA
       objectReference: {fileID: 0}
     - target: {fileID: 3322983170037236169, guid: e4e680f764f54694db4e8e175c7bda56,
         type: 3}

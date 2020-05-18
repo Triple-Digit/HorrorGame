@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public PlayerMovement instance;
+    public static PlayerMovement instance;
 
     //Variables for movement
     public Rigidbody2D body;
@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     Vector2 movement;
     bool running;
+    public bool canMove;
 
     //Spawing Particles
     public Transform spawnPoint;
@@ -23,24 +24,43 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource clap;
     public AudioSource walk;
 
+    private void Awake()
+    {
+        instance = this;
+        canMove = true;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
-        
         speed = walkSpeed;
     }
 
     void Update()
     {
-        MovemnetInput();
-        SpawnParticles();
+        if(canMove)
+        {
+            MovemnetInput();
+            SpawnParticles();
+        }
+        else
+        {
+            return;
+        }
     }
 
     private void FixedUpdate()
     {
-        Movement();
+        if (canMove)
+        {
+            Movement();
+        }
+        else
+        {
+            movement.x = 0f;
+            movement.x = 0f;
+        }
+        
     }
 
 
@@ -107,5 +127,13 @@ public class PlayerMovement : MonoBehaviour
             clap.Play();
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            canMove = false;
+        }
     }
 }

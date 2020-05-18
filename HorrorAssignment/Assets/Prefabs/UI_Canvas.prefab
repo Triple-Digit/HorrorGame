@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 5379120288229270479}
   - component: {fileID: 5379120288229270480}
   - component: {fileID: 5379120288229270481}
+  - component: {fileID: 4498243488326351973}
   m_Layer: 5
   m_Name: UI_Canvas
   m_TagString: Untagged
@@ -167,6 +168,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4498243488326351973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379120288229270482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cc5c5ebf2c5d945beab7ce7b63b735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caughtImage: {fileID: 3265091195095518619}
+  loadingScene: {fileID: 9194982348364144253}
+  caughtImageAlpha: 0
+  loadingSceneImage: 0
+  fadeSpeed: 2
 --- !u!1 &5918749646550433655
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +197,7 @@ GameObject:
   - component: {fileID: 8295423534812985875}
   - component: {fileID: 9194982348364144253}
   m_Layer: 5
-  m_Name: Caught_Image (1)
+  m_Name: Finished_Level_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
