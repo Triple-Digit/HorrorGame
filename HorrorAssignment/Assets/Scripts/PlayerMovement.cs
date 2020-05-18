@@ -103,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(particles[2], spawnPoint.transform.position, spawnPoint.rotation);
+            clap.pitch = Random.Range(0.9f, 1.1f);
             clap.Play();
         }
 
