@@ -4,17 +4,45 @@ using UnityEngine;
 
 public class TriggerID : MonoBehaviour
 {
-    public int triggerID;
+	//--- TRIGGER VARIABLES
+	[Header("TRIGGER SETTINGS")]
+	[Tooltip("Target object that is triggered (usually a manager)")]
+	public GameObject targetManager; //Single target object that is triggered (usually a manager)
+	[Tooltip("Is the target triggered only once of multiple times")]
+	public bool triggerOnce = true;
+	public int triggerID = 0;
+	private bool canBeTriggered = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	//--- USER VARIABLES
+	[Header("USER SETTINGS")]
+	[Tooltip("Name of the users triggering the zone")]
+	public string[] userNameList;
+	private bool userIsUsingTrigger = false; //is the right user entering the trigger zone?
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	//--- UTILITY VARIABLES
+	private int i = 0; // for loops
+
+	//----------------------------------------------
+	//--- TRIGGER FUNCTIONS
+	private void OnTriggerEnter2D(Collider2D user)
+	{
+		if (canBeTriggered)
+		{
+			//check if the user has the right name
+			i = 0;
+			while (i < userNameList.Length)
+			{
+				if (user.gameObject.name == userNameList[i]) { userIsUsingTrigger = true; }
+				i++;
+			}
+
+			//if so trigger the target manager
+			if (userIsUsingTrigger)
+			{
+				userIsUsingTrigger = false;
+				if (triggerOnce) { canBeTriggered = false; }
+				targetManager.SendMessage("Triggered", triggerID);
+			}
+		}
+	}
 }

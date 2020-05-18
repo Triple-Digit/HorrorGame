@@ -25,6 +25,11 @@ public class EnemyBehavior : MonoBehaviour
     public float steppingSpeed;
     float timeToSpawnFootStepSoundParticle;
 
+    //Audio
+    public bool saidVoiceline;
+    public AudioSource voiceLine;
+    public AudioSource footsteps;
+
 
     private void Awake()
     {
@@ -41,6 +46,9 @@ public class EnemyBehavior : MonoBehaviour
         speed = walkSpeed;
         Physics2D.queriesStartInColliders = false;
         startPosition = transform.position;
+
+        //Audio
+        saidVoiceline = false;
         
     }
 
@@ -62,6 +70,13 @@ public class EnemyBehavior : MonoBehaviour
             if (spottedPlayer)
             {
                 ChasePlayer();
+
+                //Audio
+                if (saidVoiceline == false)
+                {
+                    voiceLine.Play();
+                    saidVoiceline = true;
+                }
             }
             else
             {
@@ -140,6 +155,7 @@ public class EnemyBehavior : MonoBehaviour
                 }
             }
             timeToSpawnFootStepSoundParticle = Time.time + 1 / steppingSpeed;
+            footsteps.Play();
         }
     }
 
