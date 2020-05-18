@@ -10,6 +10,7 @@ public class AudioManager2 : MonoBehaviour
 	public AudioSource sound01;
 	public AudioSource sound02;
 	private AudioSource currentSound;
+	public float desiredSoundVolume;
 	private float fadeTime = 3.0f; //time in seconds for a sound to fade in and out out, and to crossfade
 
 
@@ -77,7 +78,7 @@ public class AudioManager2 : MonoBehaviour
 		//Fade the new sound in
 		if (currentSound && currentSound.volume != 1)
 		{
-			currentSound.volume = Mathf.MoveTowards(currentSound.volume, 0.6f, 1 / fadeTime * Time.deltaTime);
+			currentSound.volume = Mathf.MoveTowards(currentSound.volume, desiredSoundVolume, 1 / fadeTime * Time.deltaTime);
 		}
 	}
 
