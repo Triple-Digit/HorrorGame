@@ -63,14 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\EndLevelTrigger.cs" />
     <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\ObjectSound.cs" />
     <Compile Include="Assets\Scripts\ObjectSound2.cs" />
     <Compile Include="Assets\Scripts\ParticleBehavior.cs" />
     <Compile Include="Assets\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Test Scripts\ObjectSound.cs" />
+    <Compile Include="Assets\Scripts\Test Scripts\ProximitySound.cs" />
+    <Compile Include="Assets\Scripts\Test Scripts\TriggerID.cs" />
     <Compile Include="Assets\Scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\WaypointManager.cs" />
     <Reference Include="UnityEngine">
