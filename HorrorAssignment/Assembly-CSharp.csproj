@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Test Scripts\OpenDoor.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\ProximitySound.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\TriggerID.cs" />
+    <Compile Include="Assets\Scripts\UItext.cs" />
     <Compile Include="Assets\Scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\WaypointManager.cs" />
     <Compile Include="Assets\VoiceTrigger.cs" />
