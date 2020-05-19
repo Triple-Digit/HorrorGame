@@ -74,10 +74,12 @@
     <Compile Include="Assets\Scripts\Test Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\AudioManager2.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\ObjectSound.cs" />
+    <Compile Include="Assets\Scripts\Test Scripts\OpenDoor.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\ProximitySound.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\TriggerID.cs" />
     <Compile Include="Assets\Scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\WaypointManager.cs" />
+    <Compile Include="Assets\VoiceTrigger.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

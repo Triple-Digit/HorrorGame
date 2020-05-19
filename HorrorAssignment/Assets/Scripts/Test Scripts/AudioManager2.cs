@@ -9,6 +9,7 @@ public class AudioManager2 : MonoBehaviour
 	[Header("SOUND TO BE PLAYED")]
 	public AudioSource sound01;
 	public AudioSource sound02;
+	public AudioSource sound03;
 	private AudioSource currentSound;
 	public float desiredSoundVolume;
 	private float fadeTime = 3.0f; //time in seconds for a sound to fade in and out out, and to crossfade
@@ -40,6 +41,10 @@ public class AudioManager2 : MonoBehaviour
 		{
 			PlaySound02();
 		}
+		else if (triggerID == 3)
+		{
+			PlaySound03();
+		}
 		//add another condition when adding a new sound
 	}
 
@@ -57,6 +62,11 @@ public class AudioManager2 : MonoBehaviour
 	void PlaySound02()
 	{
 		StartFadeIn(sound02);
+	}
+
+	void PlaySound03()
+	{
+		StartFadeIn(sound03);
 	}
 	//add another PlaySound0X() when adding a new sound
 
@@ -95,6 +105,12 @@ public class AudioManager2 : MonoBehaviour
 		{
 			if (sound02.volume != 0) { sound02.volume = Mathf.MoveTowards(sound02.volume, 0, 1 / fadeTime * Time.deltaTime); }
 			else if (sound02.isPlaying) { sound02.Stop(); }
+		}
+
+		if (sound03 != currentSound)
+		{
+			if (sound03.volume != 0) { sound03.volume = Mathf.MoveTowards(sound03.volume, 0, 1 / fadeTime * Time.deltaTime); }
+			else if (sound03.isPlaying) { sound03.Stop(); }
 		}
 
 		//add another condition when adding a new sound

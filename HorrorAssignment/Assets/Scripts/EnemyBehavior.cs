@@ -29,6 +29,7 @@ public class EnemyBehavior : MonoBehaviour
     public bool saidVoiceline;
     public AudioSource voiceLine;
     public AudioSource footsteps;
+    public AudioSource kill;
 
 
     private void Awake()
@@ -147,15 +148,17 @@ public class EnemyBehavior : MonoBehaviour
                 {
                     Instantiate(particles[0], spawnPoint.transform.position, spawnPoint.rotation);
                     steppingSpeed = 3f;
+                    footsteps.Play();
                 }
                 else
                 {
                     Instantiate(particles[2], spawnPoint.transform.position, spawnPoint.rotation);
                     steppingSpeed = 1f;
+                    footsteps.Play();
                 }
             }
             timeToSpawnFootStepSoundParticle = Time.time + 1 / steppingSpeed;
-            footsteps.Play();
+            //footsteps.Play();
         }
     }
 
@@ -165,6 +168,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             GameManager.instance.PlayerCaught();
             canMove = false;
+            kill.Play();
         }
 
     }

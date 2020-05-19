@@ -250,11 +250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2c958f7b3f1cd48b79f116da8d7e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instance: {fileID: 0}
   body: {fileID: 7884108693957357248}
   walkSpeed: 3.5
   runSpeed: 7
   speed: 0
+  canMove: 0
   spawnPoint: {fileID: 7884108693230383066}
   particles:
   - {fileID: 599457258417846782, guid: a4f3ffbd92b62e548b17f50dbd29c9b0, type: 3}
@@ -275,7 +275,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d84fd153f77b15247af3f81ccd92c297, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
