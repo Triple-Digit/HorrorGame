@@ -2079,7 +2079,7 @@ PrefabInstance:
     - target: {fileID: 9146609502000555777, guid: 81bf0987a9ec5f448bde40e134b2f76c,
         type: 3}
       propertyPath: desiredSoundVolume
-      value: 0.4
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 9146609502000555777, guid: 81bf0987a9ec5f448bde40e134b2f76c,
         type: 3}
@@ -3206,12 +3206,12 @@ PrefabInstance:
     - target: {fileID: 2455904225287240951, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.51
+      value: -18.5
       objectReference: {fileID: 0}
     - target: {fileID: 2455904225287240951, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.86
+      value: -18.8
       objectReference: {fileID: 0}
     - target: {fileID: 2455904225287240951, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
@@ -3262,7 +3262,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b363f434afec3de4fb6f17a09f68fd5a, type: 3}
+      objectReference: {fileID: 8300000, guid: d878218561cf48342a9a7fe790e5252c, type: 3}
     - target: {fileID: 7511434064193091407, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
       propertyPath: voiceline

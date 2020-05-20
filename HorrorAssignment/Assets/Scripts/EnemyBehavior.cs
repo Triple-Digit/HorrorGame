@@ -30,6 +30,7 @@ public class EnemyBehavior : MonoBehaviour
     public AudioSource voiceLine;
     public AudioSource footsteps;
     public AudioSource kill;
+    public AudioSource kill2;
 
 
     private void Awake()
@@ -169,6 +170,7 @@ public class EnemyBehavior : MonoBehaviour
             GameManager.instance.PlayerCaught();
             canMove = false;
             kill.Play();
+            kill2.PlayDelayed(0.2f);
         }
 
     }

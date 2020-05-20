@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -10,6 +11,8 @@ public class AudioManager2 : MonoBehaviour
 	public AudioSource sound01;
 	public AudioSource sound02;
 	public AudioSource sound03;
+	public AudioSource sound04;
+	public AudioSource sound05;
 	private AudioSource currentSound;
 	public float desiredSoundVolume;
 	private float fadeTime = 3.0f; //time in seconds for a sound to fade in and out out, and to crossfade
@@ -45,6 +48,14 @@ public class AudioManager2 : MonoBehaviour
 		{
 			PlaySound03();
 		}
+		else if (triggerID == 4)
+		{
+			PlaySound04();
+		}
+		else if (triggerID == 5)
+		{
+			PlaySound05();
+		}
 		//add another condition when adding a new sound
 	}
 
@@ -67,6 +78,16 @@ public class AudioManager2 : MonoBehaviour
 	void PlaySound03()
 	{
 		StartFadeIn(sound03);
+	}
+
+	void PlaySound04()
+	{
+		StartFadeIn(sound04);
+	}
+
+	void PlaySound05()
+	{
+		StartFadeIn(sound05);
 	}
 	//add another PlaySound0X() when adding a new sound
 
@@ -111,6 +132,18 @@ public class AudioManager2 : MonoBehaviour
 		{
 			if (sound03.volume != 0) { sound03.volume = Mathf.MoveTowards(sound03.volume, 0, 1 / fadeTime * Time.deltaTime); }
 			else if (sound03.isPlaying) { sound03.Stop(); }
+		}
+
+		if (sound04 != currentSound)
+		{
+			if (sound04.volume != 0) { sound04.volume = Mathf.MoveTowards(sound04.volume, 0, 1 / fadeTime * Time.deltaTime); }
+			else if (sound04.isPlaying) { sound04.Stop(); }
+		}
+
+		if (sound05 != currentSound)
+		{
+			if (sound05.volume != 0) { sound05.volume = Mathf.MoveTowards(sound05.volume, 0, 1 / fadeTime * Time.deltaTime); }
+			else if (sound05.isPlaying) { sound05.Stop(); }
 		}
 
 		//add another condition when adding a new sound

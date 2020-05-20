@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Test Scripts\AmbientTrigger.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\AudioManager2.cs" />
+    <Compile Include="Assets\Scripts\Test Scripts\DelayedVoiceTrigger.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\ObjectSound.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\OpenDoor.cs" />
     <Compile Include="Assets\Scripts\Test Scripts\ProximitySound.cs" />
