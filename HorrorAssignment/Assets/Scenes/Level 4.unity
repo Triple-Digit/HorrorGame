@@ -6921,7 +6921,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d250aa927bfec364bbea7e678ccb06fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 99d66ff668a866f45adf540019514f00, type: 3}
     - target: {fileID: 3696261292458740956, guid: bf6625e49b5a58b40af9911ed7871789,
         type: 3}
       propertyPath: walkSpeed
@@ -13219,7 +13219,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d250aa927bfec364bbea7e678ccb06fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 99d66ff668a866f45adf540019514f00, type: 3}
     - target: {fileID: 3696261292458740956, guid: bf6625e49b5a58b40af9911ed7871789,
         type: 3}
       propertyPath: waypoints
@@ -14123,7 +14123,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d250aa927bfec364bbea7e678ccb06fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 99d66ff668a866f45adf540019514f00, type: 3}
     - target: {fileID: 3696261292458740956, guid: bf6625e49b5a58b40af9911ed7871789,
         type: 3}
       propertyPath: walkSpeed
@@ -14218,7 +14218,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d250aa927bfec364bbea7e678ccb06fe, type: 3}
+      objectReference: {fileID: 8300000, guid: 99d66ff668a866f45adf540019514f00, type: 3}
     - target: {fileID: 3696261292458740956, guid: bf6625e49b5a58b40af9911ed7871789,
         type: 3}
       propertyPath: walkSpeed

@@ -106,13 +106,13 @@ public class PlayerMovement : MonoBehaviour
 
                 if (running)
                 {
-                    walk.pitch = Random.Range(0.8f, 1.0f);
-                    walk.volume = 0.6f;
+                    walk.pitch = Random.Range(1.0f, 1.1f);
+                    walk.volume = 0.5f;
                     walk.Play();
                 }
                 else if (!running)
                 {
-                    walk.pitch = Random.Range(0.8f, 1.0f);
+                    walk.pitch = Random.Range(1.0f, 1.1f);
                     walk.volume = 0.2f;
                     walk.Play();
                 }

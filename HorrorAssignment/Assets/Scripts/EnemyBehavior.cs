@@ -66,6 +66,7 @@ public class EnemyBehavior : MonoBehaviour
                 if (chasedPlayer && hitInfo.collider.tag != "Player")
                 {
                     spottedPlayer = false;
+                    saidVoiceline = false; //Attempt to have the voiceline repeat.
                 }
             }
             SpawnParitcles();
@@ -76,7 +77,7 @@ public class EnemyBehavior : MonoBehaviour
                 //Audio
                 if (saidVoiceline == false)
                 {
-                    voiceLine.Play();
+                    voiceLine.PlayDelayed(0.5f);
                     saidVoiceline = true;
                 }
             }

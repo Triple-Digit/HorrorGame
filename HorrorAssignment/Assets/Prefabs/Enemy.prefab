@@ -121,7 +121,6 @@ MonoBehaviour:
   footsteps: {fileID: -4201693021927528964}
   kill: {fileID: -3464042864545312289}
   kill2: {fileID: 4088798523785214350}
-  playerBreath: {fileID: 0}
 --- !u!50 &3696261292458740963
 Rigidbody2D:
   serializedVersion: 4
@@ -275,7 +274,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3ef44ecf4fb1eee469a3d31e276f1cbb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fd9487efa9a14fb46bb5cc12550f5d4a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 1

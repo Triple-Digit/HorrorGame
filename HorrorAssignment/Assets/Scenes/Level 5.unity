@@ -9963,6 +9963,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 742498440}
     m_Modifications:
+    - target: {fileID: -4201693021927528964, guid: bf6625e49b5a58b40af9911ed7871789,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 99d66ff668a866f45adf540019514f00, type: 3}
     - target: {fileID: 3696261292458740956, guid: bf6625e49b5a58b40af9911ed7871789,
         type: 3}
       propertyPath: walkSpeed
@@ -10033,6 +10038,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5341633942431420417, guid: bf6625e49b5a58b40af9911ed7871789,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 81e95899dd507dc439dbf3ba567ac4f4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6625e49b5a58b40af9911ed7871789, type: 3}
 --- !u!1 &1208056387
@@ -11119,6 +11129,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 742498440}
     m_Modifications:
+    - target: {fileID: -4201693021927528964, guid: bf6625e49b5a58b40af9911ed7871789,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 99d66ff668a866f45adf540019514f00, type: 3}
     - target: {fileID: 3696261292458740956, guid: bf6625e49b5a58b40af9911ed7871789,
         type: 3}
       propertyPath: walkSpeed
@@ -11189,6 +11204,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5341633942431420417, guid: bf6625e49b5a58b40af9911ed7871789,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 81e95899dd507dc439dbf3ba567ac4f4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf6625e49b5a58b40af9911ed7871789, type: 3}
 --- !u!4 &1471801846 stripped
@@ -16248,7 +16268,7 @@ PrefabInstance:
     - target: {fileID: 4402512320175370193, guid: 38586f4b86446ba4c9671cf4ff894027,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.31485
       objectReference: {fileID: 0}
     - target: {fileID: 4402512320175370193, guid: 38586f4b86446ba4c9671cf4ff894027,
         type: 3}
@@ -16293,12 +16313,17 @@ PrefabInstance:
     - target: {fileID: 4402512320175370193, guid: 38586f4b86446ba4c9671cf4ff894027,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.33333334
+      value: 0.22838335
       objectReference: {fileID: 0}
     - target: {fileID: 4402512320175370193, guid: 38586f4b86446ba4c9671cf4ff894027,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.33333334
+      value: 0.22838335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402512320175370193, guid: 38586f4b86446ba4c9671cf4ff894027,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.68515
       objectReference: {fileID: 0}
     - target: {fileID: 4402512320175370199, guid: 38586f4b86446ba4c9671cf4ff894027,
         type: 3}
