@@ -258,7 +258,7 @@ MonoBehaviour:
   isOpen: 0
   open: {fileID: 9023520800229111849}
   spawnPoint: {fileID: 7621125696930794651}
-  particles: {fileID: 599457258417846782, guid: a4f3ffbd92b62e548b17f50dbd29c9b0,
+  particles: {fileID: 599457258417846782, guid: 6140a990e6c27ca448af1e275a3d89a8,
     type: 3}
 --- !u!82 &9023520800229111849
 AudioSource:
