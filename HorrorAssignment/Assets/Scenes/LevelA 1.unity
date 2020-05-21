@@ -1187,7 +1187,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press shift to run
+  m_Text: Press Shift to run
 --- !u!222 &989480098
 CanvasRenderer:
   m_ObjectHideFlags: 0
