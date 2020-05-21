@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource clap;
     public AudioSource walk;
 
+    //Detecting objects
+    public bool closeToDoor;
+
     private void Awake()
     {
         instance = this;
@@ -126,7 +129,6 @@ public class PlayerMovement : MonoBehaviour
             clap.pitch = Random.Range(0.9f, 1.1f);
             clap.Play();
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -136,4 +138,24 @@ public class PlayerMovement : MonoBehaviour
             canMove = false;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Interactable")
+        {
+            UiManager.instance.CallFadeInText(UiManager.instance.interactableText);
+            
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Interactable")
+        {
+            UiManager.instance.showInteractableText = false;
+            
+        }
+    }
+
+    
 }
