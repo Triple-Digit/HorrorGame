@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5451651621746866146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3932167173820882658}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3932167173820882658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5451651621746866146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7371527647227246860}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7371527645998562285
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7371527645998562285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.96, y: 3.0691922, z: -2.4713287}
+  m_LocalPosition: {x: 1.96, y: 3.0691922, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7371527647227246860}
@@ -124,6 +154,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerDetection
+      objectReference: {fileID: 0}
+    - target: {fileID: 339864226821105941, guid: 4599b64fc0bc18745a4b27613550fa93,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 3932167173820882658}
+    - target: {fileID: 339864226821105941, guid: 4599b64fc0bc18745a4b27613550fa93,
+        type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 599457258417846782, guid: 6140a990e6c27ca448af1e275a3d89a8,
+        type: 3}
+    - target: {fileID: 339864226821105942, guid: 4599b64fc0bc18745a4b27613550fa93,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1236418800157639486, guid: 4599b64fc0bc18745a4b27613550fa93,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4599b64fc0bc18745a4b27613550fa93, type: 3}

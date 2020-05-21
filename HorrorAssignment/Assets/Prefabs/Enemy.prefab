@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 6
-  runSpeed: 8
+  runSpeed: 10
   speed: 0
   distance: 50
   spottedPlayer: 0

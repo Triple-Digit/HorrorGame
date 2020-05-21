@@ -29,10 +29,10 @@ public class OpenDoor : MonoBehaviour
         if(isOpen == false && inRange && Input.GetKeyDown("e"))
         {
             open.Play();
+            Destroy(doorCollider, 0.5f);
             Instantiate(particles, spawnPoint.transform.position, spawnPoint.rotation);
             isOpen = true;
             //Debug.Log("Particles!"); // <- That works... So why aren't the particles spawning...
-            Destroy(doorCollider, 0.5f);
         }
     }
 

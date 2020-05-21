@@ -77,7 +77,7 @@ public class EnemyBehavior : MonoBehaviour
                 //Audio
                 if (saidVoiceline == false)
                 {
-                    voiceLine.PlayDelayed(0.5f);
+                    voiceLine.PlayDelayed(0.2f);
                     saidVoiceline = true;
                 }
             }

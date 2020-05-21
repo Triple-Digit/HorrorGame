@@ -7,6 +7,10 @@ public class VoiceTrigger : MonoBehaviour
     public AudioSource voiceline;
     public bool hasPlayed;
 
+    //Particle Test
+    public Transform spawnPoint;
+    public GameObject particles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,7 @@ public class VoiceTrigger : MonoBehaviour
         if(collision.gameObject.tag == "Player" && hasPlayed == false)
         {
             voiceline.Play();
+            Instantiate(particles, spawnPoint.transform.position, spawnPoint.rotation);
             hasPlayed = true;
         }
     }

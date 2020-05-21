@@ -7,6 +7,9 @@ public class ObjectSound2 : MonoBehaviour
     public AudioSource sFX;
     public bool inRange;
 
+    public Transform spawnPoint;
+    public GameObject particles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,7 @@ public class ObjectSound2 : MonoBehaviour
         if(inRange && Input.GetKeyDown("e"))
         {
             sFX.Play();
+            Instantiate(particles, spawnPoint.transform.position, spawnPoint.rotation);
         }
     }
 
