@@ -31452,6 +31452,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3252559949349538920, guid: 37418becca75a074bb002a31fca327de,
+        type: 3}
+      propertyPath: m_RenderingPath
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7884108693957357250, guid: 37418becca75a074bb002a31fca327de,
         type: 3}
       propertyPath: m_Enabled
@@ -32292,6 +32297,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1732643413297437342, guid: e4e680f764f54694db4e8e175c7bda56,
+        type: 3}
+      propertyPath: isGlobal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322983170037236168, guid: e4e680f764f54694db4e8e175c7bda56,
+        type: 3}
+      propertyPath: nextScene
+      value: Ending
+      objectReference: {fileID: 0}
     - target: {fileID: 3322983170037236169, guid: e4e680f764f54694db4e8e175c7bda56,
         type: 3}
       propertyPath: m_LocalPosition.x
