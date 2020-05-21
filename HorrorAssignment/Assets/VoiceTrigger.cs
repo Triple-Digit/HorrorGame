@@ -28,8 +28,10 @@ public class VoiceTrigger : MonoBehaviour
         if(collision.gameObject.tag == "Player" && hasPlayed == false)
         {
             voiceline.Play();
-            Instantiate(particles, spawnPoint.transform.position, spawnPoint.rotation);
+            
             hasPlayed = true;
+
+            Instantiate(particles, spawnPoint.transform.position, spawnPoint.rotation);
         }
     }
 }
