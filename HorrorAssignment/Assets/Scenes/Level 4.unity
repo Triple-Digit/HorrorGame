@@ -1274,6 +1274,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7371527645998562285, guid: 018818a385fa3854d903c0f847928677,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7371527647227246858, guid: 018818a385fa3854d903c0f847928677,
         type: 3}
       propertyPath: m_Volume
@@ -1293,6 +1298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MaxDistance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371527647227246861, guid: 018818a385fa3854d903c0f847928677,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 018818a385fa3854d903c0f847928677, type: 3}
@@ -8571,6 +8581,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7034f0759e5763849ab1640bd655e4e1, type: 3}
+    - target: {fileID: 6265384974537631552, guid: ef8d642856af469469285b15cda899d1,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7511434064193091407, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
       propertyPath: voiceline
@@ -15855,6 +15870,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office 1 Table
       objectReference: {fileID: 0}
+    - target: {fileID: 5910706554590155193, guid: 9429384014dd10a4bb3fb60e1e5b3550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910706555458237816, guid: 9429384014dd10a4bb3fb60e1e5b3550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9429384014dd10a4bb3fb60e1e5b3550, type: 3}
 --- !u!4 &820889039 stripped
@@ -21585,7 +21610,7 @@ PrefabInstance:
     - target: {fileID: 6265384974537631552, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
       propertyPath: m_Volume
-      value: 0.6
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6265384974537631552, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
@@ -26676,6 +26701,16 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ccfc143d665344e4c9263e10bbfb958f, type: 3}
+    - target: {fileID: 8959569019288006865, guid: 81bf0987a9ec5f448bde40e134b2f76c,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959569019288006865, guid: 81bf0987a9ec5f448bde40e134b2f76c,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 9146609502000555777, guid: 81bf0987a9ec5f448bde40e134b2f76c,
         type: 3}
       propertyPath: sound01
@@ -28927,6 +28962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VoiceTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 8112215797988880118, guid: ef8d642856af469469285b15cda899d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef8d642856af469469285b15cda899d1, type: 3}
 --- !u!4 &1575659751 stripped
@@ -29540,6 +29580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerDetection
+      objectReference: {fileID: 0}
+    - target: {fileID: 339864226821105937, guid: 4599b64fc0bc18745a4b27613550fa93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 339864226821105942, guid: 4599b64fc0bc18745a4b27613550fa93,
         type: 3}
@@ -33061,6 +33106,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDetection
       objectReference: {fileID: 0}
+    - target: {fileID: 339864226821105937, guid: 4599b64fc0bc18745a4b27613550fa93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 339864226821105942, guid: 4599b64fc0bc18745a4b27613550fa93,
         type: 3}
       propertyPath: m_audioClip
@@ -33918,6 +33968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7371527645998562285, guid: 018818a385fa3854d903c0f847928677,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7371527647227246858, guid: 018818a385fa3854d903c0f847928677,
         type: 3}
       propertyPath: m_Volume
@@ -33937,6 +33992,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MaxDistance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371527647227246861, guid: 018818a385fa3854d903c0f847928677,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 018818a385fa3854d903c0f847928677, type: 3}
@@ -37072,6 +37132,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office 1 Table
       objectReference: {fileID: 0}
+    - target: {fileID: 5910706554590155193, guid: 9429384014dd10a4bb3fb60e1e5b3550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910706555458237816, guid: 9429384014dd10a4bb3fb60e1e5b3550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9429384014dd10a4bb3fb60e1e5b3550, type: 3}
 --- !u!4 &2131193408 stripped
@@ -37957,6 +38027,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Office 1 Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910706554590155193, guid: 9429384014dd10a4bb3fb60e1e5b3550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910706555458237816, guid: 9429384014dd10a4bb3fb60e1e5b3550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9429384014dd10a4bb3fb60e1e5b3550, type: 3}

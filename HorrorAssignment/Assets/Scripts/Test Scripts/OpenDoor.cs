@@ -11,6 +11,10 @@ public class OpenDoor : MonoBehaviour
     public bool isOpen;
     public AudioSource open;
 
+    //Particle Test
+    public Transform spawnPoint;
+    public GameObject particles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +29,10 @@ public class OpenDoor : MonoBehaviour
         if(isOpen == false && inRange && Input.GetKeyDown("e"))
         {
             open.Play();
+            Instantiate(particles, spawnPoint.transform.position, spawnPoint.rotation);
             isOpen = true;
-            Destroy(doorCollider);
+            //Debug.Log("Particles!"); // <- That works... So why aren't the particles spawning...
+            Destroy(doorCollider, 0.5f);
         }
     }
 

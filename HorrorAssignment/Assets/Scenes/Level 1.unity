@@ -2875,6 +2875,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: cf0d11cfb7636df41a2b8bebee1a008d, type: 3}
+    - target: {fileID: 6265384974537631552, guid: ef8d642856af469469285b15cda899d1,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7511434064193091407, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
       propertyPath: voiceline

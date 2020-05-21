@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2756419667567167567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7621125696930794651}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7621125696930794651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756419667567167567}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9023520800229111854}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9023520800069635569
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +42,7 @@ GameObject:
   - component: {fileID: 9023520800069635570}
   - component: {fileID: 9023520800069635571}
   - component: {fileID: 3966052894605128335}
+  - component: {fileID: 8950801375458555291}
   m_Layer: 0
   m_Name: Door Unlockable (Horizontal)
   m_TagString: Interactable
@@ -136,6 +167,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 7}
   m_EdgeRadius: 0
+--- !u!114 &8950801375458555291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023520800069635569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e5435588635c848bd1949ef7b5db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uITrigger: {fileID: 3966052894605128335}
+  inRange: 0
 --- !u!1 &9023520800229111855
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +210,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7621125696930794651}
   m_Father: {fileID: 9023520800069635568}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -211,6 +257,9 @@ MonoBehaviour:
   inRange: 0
   isOpen: 0
   open: {fileID: 9023520800229111849}
+  spawnPoint: {fileID: 7621125696930794651}
+  particles: {fileID: 599457258417846782, guid: a4f3ffbd92b62e548b17f50dbd29c9b0,
+    type: 3}
 --- !u!82 &9023520800229111849
 AudioSource:
   m_ObjectHideFlags: 0

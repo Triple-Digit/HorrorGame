@@ -1152,7 +1152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 64.599976, y: -329.09998}
+  m_AnchoredPosition: {x: 34.7, y: -329.09998}
   m_SizeDelta: {x: -726.75256, y: -712.2661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989480097
@@ -3372,6 +3372,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d878218561cf48342a9a7fe790e5252c, type: 3}
+    - target: {fileID: 6265384974537631552, guid: ef8d642856af469469285b15cda899d1,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7511434064193091407, guid: ef8d642856af469469285b15cda899d1,
         type: 3}
       propertyPath: voiceline
